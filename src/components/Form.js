@@ -10,7 +10,9 @@ import {
   setState,
   getDefaultRegistry,
 } from "../utils";
-import validateFormData, { toErrorList } from "../validate";
+import validateFormData, { toErrorList, getValidator } from "../validate";
+
+export { getValidator };
 
 export default class Form extends Component {
   static defaultProps = {

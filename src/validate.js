@@ -142,6 +142,10 @@ function transformAjvErrors(errors = []) {
   });
 }
 
+function getValidator() {
+  return ajv;
+}
+
 /**
  * This function processes the formData with a user `validate` contributed
  * function, which receives the form data and an `errorHandler` object that
@@ -181,3 +185,5 @@ export default function validateFormData(
 
   return { errors: newErrors, errorSchema: newErrorSchema };
 }
+
+export { getValidator, validateFormData };
